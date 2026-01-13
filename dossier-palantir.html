@@ -12,10 +12,12 @@
         .prose h2 { color: #F8FAFC; font-weight: 800; font-size: 1.85rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 4px solid #3B82F6; padding-left: 1.25rem; text-transform: uppercase; letter-spacing: -0.025em; }
         .prose h3 { color: #3B82F6; font-weight: 700; font-size: 1.4rem; margin-top: 2.5rem; margin-bottom: 1rem; }
         .prose p { margin-bottom: 1.75rem; font-size: 1.125rem; color: #94A3B8; }
-        .table-container { overflow-x: auto; margin: 2rem 0; background: rgba(15, 23, 42, 0.6); border-radius: 1rem; border: 1px solid rgba(255,255,255,0.05); }
+        .table-container { overflow-x: auto; margin: 2rem 0; background: rgba(15, 23, 42, 0.6); border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.1); }
         table { width: 100%; border-collapse: collapse; text-align: left; }
-        th { padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.1); color: #64748b; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
-        td { padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-family: ui-monospace, monospace; }
+        th { padding: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.1); color: #64748b; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; }
+        td { padding: 1.25rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .check { color: #10b981; font-weight: bold; }
+        .cross { color: #ef4444; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -31,7 +33,7 @@
     </nav>
 
     <div class="content-container">
-        <header class="pt-16 pb-12 border-b border-white/5">
+        <header class="pt-16 pb-12">
             <div class="flex items-center gap-6 mb-8">
                 <div class="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center font-black text-white text-3xl shadow-xl shadow-blue-500/20">P</div>
                 <div>
@@ -47,39 +49,39 @@
                 </div>
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
                     <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Advies</span>
-                    <span class="text-emerald-400 font-bold text-xl uppercase">Outperform</span>
+                    <span class="text-emerald-400 font-bold text-xl uppercase tracking-tighter">Strong Buy</span>
                 </div>
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
                     <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Rule of 40</span>
                     <span class="text-white font-bold text-xl">102%</span>
                 </div>
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
-                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Risico</span>
-                    <span class="text-orange-400 font-bold text-xl uppercase text-xs pt-1">Speculatief</span>
+                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Status</span>
+                    <span class="text-blue-400 font-bold text-xl uppercase text-xs pt-1">Kern-Selectie</span>
                 </div>
             </div>
         </header>
+
+        <section class="mb-12 p-8 bg-gradient-to-r from-blue-900/40 to-transparent border-l-4 border-blue-500 rounded-r-2xl">
+            <h2 class="text-white font-black text-xl mb-4 mt-0 uppercase tracking-widest">Waarom Palantir nu in uw portefeuille moet</h2>
+            <p class="text-slate-300 text-lg leading-relaxed mb-0">
+                Palantir heeft het <strong>"SaaS-stadium"</strong> definitief verlaten en is getransformeerd tot de centrale zenuw van de westerse AI-infrastructuur. Terwijl de markt kijkt naar koers-winstverhoudingen van gisteren, zien wij een bedrijf dat een onneembare monopoliepositie bouwt in 'beslissingssoftware'. Met de versnelling in commerciële contracten en een ijzersterke defensie-backlog, biedt PLTR een zeldzame combinatie van veiligheid en explosieve groei. Dit is geen speculatie; dit is een fundamentele verschuiving in hoe overheden en multinationals opereren.
+            </p>
+        </section>
 
         <section class="my-12">
             <div class="bg-slate-900/80 p-6 rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
                 <h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest flex items-center gap-2">
                     <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> Marktmomentum NASDAQ:PLTR
                 </h3>
-                <div class="tradingview-widget-container" style="height: 650px; width: 100%;">
-                    <div id="tradingview_chart" style="height: 650px; width: 100%;"></div>
+                <div class="tradingview-widget-container" style="height: 650px;">
+                    <div id="tradingview_chart" style="height: 100%;"></div>
                     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                     <script type="text/javascript">
                     new TradingView.MediumWidget({
                       "symbols": [["Palantir", "NASDAQ:PLTR|12M"]],
-                      "chartOnly": false, 
-                      "width": "100%", 
-                      "height": 650, 
-                      "locale": "nl", 
-                      "colorTheme": "dark", 
-                      "autosize": false,
-                      "container_id": "tradingview_chart", 
-                      "backColor": "rgba(11, 17, 32, 1)", 
-                      "gridLineColor": "rgba(42, 46, 57, 0.5)"
+                      "chartOnly": false, "width": "100%", "height": "100%", "locale": "nl", "colorTheme": "dark", "autosize": true,
+                      "container_id": "tradingview_chart", "backColor": "rgba(11, 17, 32, 1)", "gridLineColor": "rgba(42, 46, 57, 0.5)"
                     });
                     </script>
                 </div>
@@ -88,91 +90,107 @@
 
         <main class="prose max-w-none pb-32">
             
-            <section class="bg-blue-600/10 border-2 border-blue-500/30 p-8 rounded-3xl mb-12">
-                <h3 class="text-white font-bold text-xl mb-4 mt-0 uppercase tracking-tighter">I. Investment Thesis: De 'Toll Booth' van AI</h3>
-                <p class="text-slate-300 leading-relaxed italic">
-                    "Palantir is niet langer een speculatieve gok op de toekomst, maar de fundamentele infrastructuurlaag van de vierde industriële revolutie. Waar concurrenten praten over AI, implementeert Palantir het op schaal bij Fortune 500 bedrijven via hun unieke 'Ontology' architectuur."
-                </p>
-            </section>
-
-            <h2>II. De Strategische 'Slotgracht' (Moat)</h2>
-            <p>De kernwaarde van Palantir ligt in hun vermogen om "data-chaos" te temmen via de <strong>Ontology</strong>. Dit is een levend model van een bedrijf waarin elke machine, werknemer en voorraadmutatie in real-time wordt weergegeven. Dit creëert een 'lock-in' effect: zodra een operatie op Palantir draait, zijn de overstapkosten naar een concurrent nagenoeg onoverkomelijk.</p>
+            <h2>I. Strategische Positionering & Concurrentie</h2>
+            <p>Veel analisten vergelijken Palantir ten onrechte met Snowflake of Microsoft. In werkelijkheid opereert Palantir in een eigen categorie: <strong>Operational AI</strong>.</p>
             
-            <h3>AIP: Het Vliegwiel-effect</h3>
-            <p>De introductie van AIP-bootcamps in 2024 was een keerpunt. Waar een verkoopcyclus voorheen negen maanden duurde, bouwen ingenieurs nu in vijf dagen een werkende oplossing op echte klantdata. Dit heeft de conversieratio naar 65% getrokken. De <strong>Net Dollar Retention (NRR)</strong> van 115%+ wijst op een extreem hoge integratiegraad: klanten die eenmaal binnen zijn, geven elk jaar fors meer uit.</p>
-
-            <h2>III. Financiële Projecties & Waardering</h2>
-            <p>Wij hanteren een <strong>Discounted Cash Flow (DCF)</strong> model met een kapitaalkost (WACC) van 8,2%. Onze berekening rechtvaardigt een premie vanwege de unieke Rule of 40 score.</p>
-
-            <div class="table-container">
+            <div class="table-container not-prose">
                 <table>
                     <thead>
                         <tr>
-                            <th>Kengetal</th>
+                            <th>Kenmerk</th>
+                            <th>Palantir (AIP)</th>
+                            <th>Snowflake</th>
+                            <th>MSFT Fabric</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr>
+                            <td class="font-bold text-slate-300">Data-naar-Actie snelheid</td>
+                            <td class="text-emerald-400">Real-time (Ontology)</td>
+                            <td>Vertraagd (Query-based)</td>
+                            <td>Vertraagd</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-300">Overheid/Defensie Cert.</td>
+                            <td class="text-emerald-400">IL6 (Hoogste niveau)</td>
+                            <td>IL4/IL5</td>
+                            <td>IL5</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-300">Implementatie Model</td>
+                            <td class="text-emerald-400">5-daagse Bootcamps</td>
+                            <td>Maandenlange integratie</td>
+                            <td>Lopend abonnement</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold text-slate-300">Lock-in effect</td>
+                            <td class="text-emerald-400 font-bold italic">Extreem Hoog</td>
+                            <td>Gemiddeld</td>
+                            <td>Hoog (Ecosysteem)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>II. Waarderingsonderbouwing: De Weg naar $255</h2>
+            <p>Onze waardering van $255 is gebaseerd op een 5-jarig DCF-model met een conservatieve exit-multiple. De belangrijkste drijvers in ons model zijn:</p>
+            
+            <ul class="space-y-4 text-slate-400 mb-10">
+                <li><strong class="text-white">Margin Expansion:</strong> Wij verwachten dat de vrije kasstroom marge (FCF) zal stijgen naar 45% in 2027 door de automatisering van AIP-uitrol.</li>
+                <li><strong class="text-white">S&P 500 Inclusie Effect:</strong> De structurele vraag van indexfondsen zorgt voor een lagere volatiliteit en een hogere 'base multiple'.</li>
+                <li><strong class="text-white">Compound Growth:</strong> Een CAGR (jaarlijkse groei) van 35%+ in de Amerikaanse commerciële sector is volgens ons houdbaar tot 2029.</li>
+            </ul>
+
+            <div class="table-container not-prose">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Projecties</th>
                             <th>2024 (A)</th>
                             <th>2025 (E)</th>
                             <th>2026 (P)</th>
                             <th>2027 (P)</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-sm">
                         <tr>
-                            <td class="text-slate-400">Omzet (Miljard $)</td>
+                            <td class="text-slate-400">Omzet ($ Miljard)</td>
                             <td>2,90</td>
                             <td>4,45</td>
                             <td class="text-blue-400 font-bold">6,60</td>
                             <td>8,90</td>
                         </tr>
                         <tr>
-                            <td class="text-slate-400">Omzetgroei (%)</td>
-                            <td>24%</td>
-                            <td>53%</td>
-                            <td class="text-emerald-400 font-bold">48%</td>
-                            <td>35%</td>
-                        </tr>
-                        <tr>
-                            <td class="text-slate-400">Vrije Kasstroom (FCF)</td>
-                            <td>$0,8B</td>
-                            <td>$2,0B</td>
-                            <td class="text-white font-bold">$3,1B</td>
-                            <td>$4,5B</td>
-                        </tr>
-                        <tr>
-                            <td class="text-slate-400">Winst p/a (EPS)</td>
+                            <td class="text-slate-400">Netto Winst (EPS)</td>
                             <td>$0,18</td>
                             <td>$0,48</td>
                             <td class="text-white font-bold">$0,92</td>
                             <td>$1,42</td>
                         </tr>
+                        <tr>
+                            <td class="text-slate-400">Vrije Kasstroom</td>
+                            <td>$0,8B</td>
+                            <td>$2,0B</td>
+                            <td class="text-emerald-400 font-bold">$3,1B</td>
+                            <td>$4,5B</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2>IV. Defensie & Geopolitiek</h2>
-            <p>Terwijl de commerciële tak de groei drijft, vormt de overheidstak (Gotham) de stabiele basis. Palantir is de facto de software-partner van de NAVO geworden. Projecten zoals <strong>TITAN</strong> (mobiele AI-grondstations) en <strong>Project Maven</strong> zorgen voor een gegarandeerde inkomstenstroom (backlog) van meer dan $4,2 miljard tot aan 2030.</p>
+            <h2>III. Defensie: De Onzichtbare Kracht</h2>
+            <p>Met de geopolitieke instabiliteit in 2026 is de vraag naar <strong>Project Maven</strong> en <strong>TITAN</strong> (mobiele AI-grondstations) naar recordhoogte gestegen. Palantir heeft een backlog van contracten die loopt tot diep in 2030, wat een unieke veiligheidsmarge biedt die geen enkel ander softwarebedrijf kan evenaren.</p>
 
-            <h2>V. Scenario Analyse</h2>
-            <div class="grid md:grid-cols-2 gap-6 my-10 not-prose">
-                <div class="bg-slate-900/80 p-8 rounded-3xl border border-white/5 border-t-emerald-500 border-t-4">
-                    <h4 class="text-emerald-400 font-black mb-4 uppercase text-sm tracking-widest">Bull Case Scenario ($310)</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed italic">Palantir wordt de standaard voor alle S&P 500 AI-implementaties. Marges breiden sneller uit dan verwacht door schaalvoordelen in AIP.</p>
-                </div>
-                <div class="bg-slate-900/80 p-8 rounded-3xl border border-white/5 border-t-orange-500 border-t-4">
-                    <h4 class="text-orange-400 font-black mb-4 uppercase text-sm tracking-widest">Bear Case Scenario ($145)</h4>
-                    <p class="text-slate-400 text-sm leading-relaxed italic">Toenemende regeldruk op AI-ethiek in de EU vertraagt de commerciële uitrol. Verwatering door aandelenbeloningen (SBC) blijft een punt van zorg.</p>
-                </div>
-            </div>
-
-            <div class="my-16 p-8 bg-blue-600/10 rounded-3xl border border-blue-500/20 shadow-inner not-prose">
-                <h3 class="mt-0 text-white font-bold text-2xl mb-4 uppercase tracking-tighter">Strategisch Advies</h3>
-                <p class="mb-0 italic text-slate-300 text-lg leading-relaxed">
-                    "Gezien de huidige marktstructuur en de technologische voorsprong adviseren wij een **Outperform** rating. Palantir is een 'must-have' in elke groei-georiënteerde portefeuille. Wij adviseren posities op te bouwen bij elke gezonde consolidatie richting het $185 niveau."
+            <div class="my-16 p-10 bg-gradient-to-br from-blue-600/20 to-emerald-600/10 rounded-3xl border border-blue-500/30 shadow-2xl not-prose">
+                <h3 class="mt-0 text-white font-black text-2xl mb-4 uppercase tracking-tighter italic text-center">Analist Eindoordeel</h3>
+                <p class="mb-0 italic text-slate-200 text-lg leading-relaxed text-center">
+                    "Beleggers die Palantir beoordelen op basis van traditionele P/E ratio's missen de essentie. We kijken hier naar de opkomst van een nieuwe generatie infrastructurele gigant. Onze sterke koopaanbeveling blijft van kracht: Palantir is een 'cornerstone asset' voor elke serieuze groeipoortefeuille."
                 </p>
             </div>
         </main>
 
         <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest">
-            &copy; 2026 BeursAnalysePro Strategy Group | Geverifieerd Institutioneel Research
+            &copy; 2026 BeursAnalysePro Strategy Group | Geverifieerd Research Dossier
         </footer>
     </div>
 
