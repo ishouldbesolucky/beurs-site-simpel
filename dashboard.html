@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | BeursAnalysePro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; }
+        .card-blur { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.03); }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-6 h-6 bg-blue-600 rounded flex items-center justify-center font-bold text-xs">B</div>
+                <span class="text-sm font-bold tracking-tight uppercase tracking-tighter italic">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+            </div>
+            <a href="index.html" class="text-xs text-slate-400 hover:text-white transition uppercase font-bold tracking-widest">Uitloggen</a>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 pt-16 pb-12">
+        <h1 class="text-3xl md:text-5xl font-black mb-4">Welkom, Premium Lid</h1>
+        <p class="text-slate-400 max-w-2xl">Hieronder vindt u de actuele selectie van onze Top 10 aandelen voor 2026. Onze analisten updaten deze dossiers wekelijks op basis van de laatste kwartaalcijfers en marktontwikkelingen.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-blue-600/10 border-2 border-blue-500 p-8 rounded-3xl flex flex-col justify-between shadow-2xl shadow-blue-500/10">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-xl uppercase">P</div>
+                        <span class="bg-emerald-500 text-black text-[10px] font-black px-2 py-1 rounded">ACTUEEL</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 uppercase tracking-tighter italic">Palantir (PLTR)</h3>
+                    <p class="text-slate-400 text-sm mb-6">Onze top-pick voor 2026. Lees waarom de markt de impact van AIP nog steeds onderschat.</p>
+                </div>
+                <a href="dossier-palantir.html" class="block w-full bg-white text-black py-3 rounded-xl font-bold text-center hover:bg-slate-200 transition">Open Dossier</a>
+            </div>
+
+            <div class="bg-slate-900/50 border border-white/5 p-8 rounded-3xl flex flex-col justify-between opacity-60">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center font-bold text-xl uppercase">A</div>
+                        <span class="bg-slate-700 text-slate-400 text-[10px] font-black px-2 py-1 rounded italic uppercase">Coming Soon</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 uppercase tracking-tighter italic text-slate-500">ASML</h3>
+                    <p class="text-slate-500 text-sm mb-6 italic">Update in progress. Onze analisten verwerken momenteel de laatste export-cijfers.</p>
+                </div>
+                <button disabled class="w-full bg-slate-800 text-slate-500 py-3 rounded-xl font-bold cursor-not-allowed uppercase text-xs">Wordt geactualiseerd</button>
+            </div>
+
+            <div class="bg-slate-900/50 border border-white/5 p-8 rounded-3xl flex flex-col justify-between opacity-60">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center font-bold text-xl uppercase">N</div>
+                        <span class="bg-slate-700 text-slate-400 text-[10px] font-black px-2 py-1 rounded italic uppercase text-xs">Coming Soon</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 uppercase tracking-tighter italic text-slate-500">NVIDIA</h3>
+                    <p class="text-slate-500 text-sm mb-6 italic">Blackwell chips en de volgende groeifase. Analyse verwacht op 20 januari.</p>
+                </div>
+                <button disabled class="w-full bg-slate-800 text-slate-500 py-3 rounded-xl font-bold cursor-not-allowed uppercase text-xs">Wordt geactualiseerd</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest">
+        &copy; 2026 BeursAnalysePro Member Area | Vertrouwelijk
+    </footer>
+
+</body>
+</html>
