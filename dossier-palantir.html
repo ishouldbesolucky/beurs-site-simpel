@@ -1,103 +1,106 @@
-<body>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier: Palantir | BeursAnalysePro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: #E2E8F0; }
+        /* Forceer alle tekst en elementen binnen de lijnen */
+        .content-container { max-width: 896px; margin: 0 auto; padding: 0 24px; }
+    </style>
+</head>
+<body class="min-h-screen">
 
-    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50">
+    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50 w-full">
         <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-2">
                 <div class="w-6 h-6 bg-blue-600 rounded flex items-center justify-center font-bold text-xs text-white">B</div>
                 <span class="text-sm font-bold tracking-tight uppercase">BeursAnalyse<span class="text-blue-500">Pro</span></span>
             </a>
-            <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full font-bold uppercase tracking-widest border border-emerald-500/20">Abonnee Toegang</span>
+            <span class="text-[10px] bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full font-bold uppercase tracking-widest border border-emerald-500/20">Premium</span>
         </div>
     </nav>
 
-    <div class="max-w-4xl mx-auto px-6">
+    <div class="content-container">
 
-        <header class="pt-16 pb-12">
-            <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-blue-500/20">P</div>
+        <header class="pt-16 pb-12 border-b border-white/5">
+            <div class="flex items-center gap-6 mb-8">
+                <div class="w-16 h-16 rounded-2xl bg-blue-600 flex items-center justify-center font-black text-white text-3xl shadow-xl shadow-blue-500/20">P</div>
                 <div>
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight uppercase">Palantir (PLTR)</h1>
-                    <p class="text-blue-400 font-bold tracking-widest uppercase text-xs">Deep Dive Research Dossier</p>
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight uppercase tracking-tighter">Palantir</h1>
+                    <p class="text-blue-400 font-bold tracking-widest uppercase text-xs">Equity Research Dossier</p>
                 </div>
             </div>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 text-center md:text-left">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
-                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1">Marktkap.</span>
+                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Marktkap</span>
                     <span class="text-white font-bold text-lg">$160B+</span>
                 </div>
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
-                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1">Sector</span>
-                    <span class="text-white font-bold text-lg">AI & Data</span>
+                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Sector</span>
+                    <span class="text-white font-bold text-lg">AI Tech</span>
                 </div>
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
-                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1">Rule of 40</span>
-                    <span class="text-emerald-400 font-bold text-lg">52%</span>
+                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Score</span>
+                    <span class="text-emerald-400 font-bold text-lg">52/40</span>
                 </div>
                 <div class="bg-slate-900/50 p-4 rounded-xl border border-white/5">
-                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1">Rating</span>
+                    <span class="block text-slate-500 text-[10px] font-black uppercase mb-1 tracking-widest">Rating</span>
                     <span class="text-emerald-400 font-bold text-lg">Strong Buy</span>
                 </div>
             </div>
         </header>
 
-        <section class="my-12 bg-slate-900/50 p-4 rounded-2xl border border-white/5">
-            <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-widest px-2">Koersverloop 12 Maanden</h3>
-            <div class="tradingview-widget-container" style="height: 450px;">
-                <div id="tradingview_chart"></div>
-                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                <script type="text/javascript">
-                new TradingView.MediumWidget({
-                  "symbols": [["Palantir", "NASDAQ:PLTR|12M"]],
-                  "chartOnly": false,
-                  "width": "100%",
-                  "height": "100%",
-                  "locale": "nl",
-                  "colorTheme": "dark",
-                  "autosize": true,
-                  "showVolume": false,
-                  "hideDateRanges": false,
-                  "scalePosition": "right",
-                  "scaleMode": "Normal",
-                  "fontFamily": "Inter, sans-serif",
-                  "container_id": "tradingview_chart",
-                  "backColor": "rgba(11, 17, 32, 1)",
-                  "gridLineColor": "rgba(42, 46, 57, 0.5)"
-                });
-                </script>
+        <section class="my-12">
+            <div class="bg-slate-900/80 p-6 rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
+                <h3 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Marktmomentum (12 Maanden)</h3>
+                <div class="tradingview-widget-container" style="height: 450px;">
+                    <div id="tradingview_chart"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    new TradingView.MediumWidget({
+                      "symbols": [["Palantir", "NASDAQ:PLTR|12M"]],
+                      "chartOnly": false, "width": "100%", "height": "100%", "locale": "nl", "colorTheme": "dark", "autosize": true,
+                      "container_id": "tradingview_chart", "backColor": "rgba(11, 17, 32, 1)", "gridLineColor": "rgba(42, 46, 57, 0.5)"
+                    });
+                    </script>
+                </div>
             </div>
         </section>
 
-        <section class="bg-gradient-to-br from-blue-600/20 to-emerald-600/10 border-2 border-blue-500 p-8 rounded-3xl my-12 relative">
-            <div class="absolute -top-4 left-6 bg-blue-500 text-white text-[10px] font-black px-3 py-1 rounded shadow-lg uppercase">Update Jan 2026</div>
-            <h3 class="text-2xl font-bold text-white mb-4 leading-tight text-center md:text-left">Huidige Visie & Koersdoel</h3>
-            <p class="text-slate-300 mb-8">Palantir profiteert van de massale adoptie van AI in de commerciële sector. De verkoopcyclus is drastisch verkort.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-white/10 text-center">
-                <div><span class="block text-slate-500 text-[10px] font-black mb-1 uppercase">Advies</span><span class="text-emerald-400 font-black text-xl italic uppercase">Strong Buy</span></div>
-                <div><span class="block text-slate-500 text-[10px] font-black mb-1 uppercase">Target</span><span class="text-white font-black text-xl">$255.00</span></div>
-                <div><span class="block text-slate-500 text-[10px] font-black mb-1 uppercase">Potentieel</span><span class="text-blue-400 font-black text-xl">+38%</span></div>
-            </div>
-        </section>
+        <main class="space-y-12 pb-32">
+            <section class="bg-blue-600/10 border border-blue-500/30 p-8 rounded-3xl">
+                <h3 class="text-xl font-bold text-white mb-2 uppercase">Update Jan 2026</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Palantir blijft onze top-selectie voor 2026. De integratie van AIP binnen commerciële instellingen verloopt sneller dan analisten hadden voorspeld. Koersdoel: <strong>$255.00</strong> (+38%).
+                </p>
+            </section>
 
-        <main class="prose prose-invert max-w-none pb-32">
-            <h2 class="text-white font-bold text-2xl mb-4 border-l-4 border-blue-600 pl-4 uppercase tracking-tighter">1. De Strategische 'Slotgracht' (Moat)</h2>
-            <p class="text-slate-400 mb-8 leading-relaxed">De kern van Palantir is de <strong>Ontology</strong>. Dit systeem fungeert als een digitale tweeling van een organisatie. Zodra een bedrijf zijn processen hierop inricht, zijn de overstapkosten nagenoeg onoverkomelijk.</p>
-
-            <h2 class="text-white font-bold text-2xl mb-4 border-l-4 border-blue-600 pl-4 uppercase tracking-tighter">2. Financiële Analyse</h2>
-            <div class="grid md:grid-cols-2 gap-6 my-10">
-                <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
-                    <h4 class="text-emerald-400 font-bold mb-2 uppercase text-xs">Bull Case ($310)</h4>
-                    <p class="text-xs text-slate-500">Volledige adoptie van AIP in de S&P 500 en versnellende FCF-marges.</p>
+            <article>
+                <h2 class="text-2xl font-black text-white mb-6 uppercase tracking-tight border-l-4 border-blue-600 pl-4">De Strategische Slotgracht</h2>
+                <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                    De kern van de waardecreatie bij Palantir ligt in de <strong>Ontology</strong>. Dit is niet simpelweg data-opslag, maar een beslissingsmotor die real-time antwoorden geeft op complexe logistieke en financiële vragen.
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 my-10">
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-white/5">
+                        <h4 class="text-emerald-400 font-bold mb-2 uppercase text-xs tracking-widest">Bull Case</h4>
+                        <p class="text-slate-400 text-sm italic">S&P 500 standaard voor AI. Target: $310.</p>
+                    </div>
+                    <div class="bg-slate-900/50 p-6 rounded-2xl border border-white/5">
+                        <h4 class="text-orange-400 font-bold mb-2 uppercase text-xs tracking-widest">Bear Case</h4>
+                        <p class="text-slate-400 text-sm italic">Afname defensie budgetten. Target: $145.</p>
+                    </div>
                 </div>
-                <div class="bg-slate-900/80 p-6 rounded-2xl border border-white/5">
-                    <h4 class="text-orange-400 font-bold mb-2 uppercase text-xs">Bear Case ($145)</h4>
-                    <p class="text-xs text-slate-500">Groei-afname in defensie-contracten en druk op multiples.</p>
-                </div>
-            </div>
+            </article>
         </main>
 
         <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest">
-            &copy; 2026 BeursAnalysePro Strategy Group
+            &copy; 2026 BeursAnalysePro
         </footer>
 
     </div> </body>
+</html>
