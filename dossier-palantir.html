@@ -61,46 +61,30 @@
         </div>
     </header>
 
- <div class="my-12 bg-[#161D2F] rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
-    <div class="p-4 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
-        <h3 class="font-bold flex items-center gap-2 uppercase tracking-wider text-[10px] text-slate-400">
-            <span class="w-2 h-2 bg-blue-500 rounded-full"></span> NASDAQ: PLTR | Koersverloop 12 Maanden
-        </h3>
-        <span class="text-[10px] text-emerald-500 font-mono animate-pulse">● LIVE DATA</span>
-    </div>
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
-        {
-          "symbols": [ [ "NASDAQ:PLTR|12M" ] ],
+<div class="my-12 bg-slate-900/50 p-4 rounded-2xl border border-white/5">
+    <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-widest px-4">Koersverloop 12 Maanden</h3>
+    <div class="tradingview-widget-container" style="height: 500px;">
+        <div id="tradingview_chart"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.MediumWidget({
+          "symbols": [["Palantir", "NASDAQ:PLTR|12M"]],
           "chartOnly": false,
           "width": "100%",
-          "height": 450,
+          "height": "100%",
           "locale": "nl",
           "colorTheme": "dark",
-          "autosize": false,
+          "autosize": true,
           "showVolume": false,
-          "showMA": false,
           "hideDateRanges": false,
-          "hideMarketStatus": false,
-          "hideSymbolLogo": false,
           "scalePosition": "right",
           "scaleMode": "Normal",
           "fontFamily": "Inter, sans-serif",
-          "fontSize": "10",
           "noOverlays": false,
-          "valuesTracking": "1",
-          "changeMode": "price-and-percent",
-          "chartType": "area",
-          "headerFontSize": "medium",
-          "backgroundColor": "rgba(22, 29, 47, 1)",
-          "gridLineColor": "rgba(42, 46, 57, 0.06)",
-          "lineWidth": 2,
-          "lineColor": "#3b82f6",
-          "topColor": "rgba(59, 130, 246, 0.3)",
-          "bottomColor": "rgba(59, 130, 246, 0)",
-          "dateFormat": "MMM dd, yyyy"
-        }
+          "container_id": "tradingview_chart",
+          "backColor": "rgba(11, 17, 32, 1)",
+          "gridLineColor": "rgba(42, 46, 57, 0.5)"
+        });
         </script>
     </div>
 </div>
