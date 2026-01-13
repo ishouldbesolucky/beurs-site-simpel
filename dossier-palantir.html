@@ -61,22 +61,44 @@
         </div>
     </header>
 
-  <div class="my-12 bg-[#161D2F] p-1 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
-    <div class="p-4 border-b border-white/5 flex justify-between items-center bg-white/[0.02]">
-        <h3 class="font-bold flex items-center gap-2 uppercase tracking-wider text-xs text-slate-400">
-            Live Koersverloop Palantir (PLTR)
-        </h3>
-        <span class="text-[10px] text-emerald-500 font-mono animate-pulse">● LIVE</span>
-    </div>
-    <div style="height: 450px; width: 100%;">
-        <iframe 
-            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_76d3d&symbol=NYSE%3APLTR&interval=D&hidesidetoolbar=1&hidetoptoolbar=1&symboledit=1&saveimage=1&toolbarbg=f1f3f6&studies=%5B%5D&theme=dark&style=1&timezone=Europe%2FAmsterdam&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=nl&utm_source=beurs-site-simpel.vercel.app&utm_medium=widget&utm_campaign=chart&utm_term=NYSE%3APLTR" 
-            style="width: 100%; height: 100%; border: none;" 
-            frameborder="0" 
-            allowtransparency="true" 
-            scrolling="no" 
-            allowfullscreen>
-        </iframe>
+ <div class="my-12 bg-[#161D2F] rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
+    <div class="tradingview-widget-container">
+        <div class="tradingview-widget-container__widget"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js" async>
+        {
+          "symbols": [ [ "Palantir", "NYSE:PLTR|12M" ] ],
+          "chartOnly": false,
+          "width": "100%",
+          "height": 450,
+          "locale": "nl",
+          "colorTheme": "dark",
+          "autosize": false,
+          "showVolume": false,
+          "showMA": false,
+          "hideDateRanges": false,
+          "hideMarketStatus": false,
+          "hideSymbolLogo": false,
+          "scalePosition": "right",
+          "scaleMode": "Normal",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+          "fontSize": "10",
+          "noOverlays": false,
+          "valuesTracking": "1",
+          "changeMode": "price-and-percent",
+          "chartType": "area",
+          "maLineColor": "#2962FF",
+          "maLineWidth": 1,
+          "maLength": 9,
+          "headerFontSize": "medium",
+          "backgroundColor": "rgba(22, 29, 47, 1)",
+          "gridLineColor": "rgba(42, 46, 57, 0.06)",
+          "lineWidth": 2,
+          "lineColor": "#3b82f6",
+          "topColor": "rgba(59, 130, 246, 0.3)",
+          "bottomColor": "rgba(59, 130, 246, 0)",
+          "dateFormat": "MMM dd, yyyy"
+        }
+        </script>
     </div>
 </div>
         <section class="update-box">
