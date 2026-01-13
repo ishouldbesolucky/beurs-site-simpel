@@ -62,7 +62,33 @@
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-32">
-        
+     <div class="my-12 bg-slate-900/50 p-4 rounded-2xl border border-white/5">
+    <h3 class="text-white font-bold mb-4 text-sm uppercase tracking-widest px-4">Koersverloop 12 Maanden</h3>
+    <div class="tradingview-widget-container" style="height: 400px;">
+        <div id="tradingview_chart"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.MediumWidget({
+          "symbols": [["Palantir", "NYSE:PLTR|12M"]],
+          "chartOnly": false,
+          "width": "100%",
+          "height": "100%",
+          "locale": "nl",
+          "colorTheme": "dark",
+          "autosize": true,
+          "showVolume": false,
+          "hideDateRanges": false,
+          "scalePosition": "right",
+          "scaleMode": "Normal",
+          "fontFamily": "Inter, sans-serif",
+          "noOverlays": false,
+          "container_id": "tradingview_chart",
+          "backColor": "rgba(11, 17, 32, 1)",
+          "gridLineColor": "rgba(42, 46, 57, 0.5)"
+        });
+        </script>
+    </div>
+</div>   
         <section class="update-box">
             <div class="update-tag">Marktupdate: Jan 2026</div>
             <h3 class="text-white mt-0 mb-4">Huidige Visie & Koersdoel</h3>
