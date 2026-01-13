@@ -3,100 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BeursAnalysePro | Elite Research</title>
+    <title>BeursAnalysePro | Institutionele Aandelen Research</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; }
-        .blur-row { filter: blur(6px); opacity: 0.4; }
+        body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; overflow-x: hidden; }
+        .hero-gradient { background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent); }
+        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+        .stat-card { border-left: 2px solid #3B82F6; }
     </style>
 </head>
-<body>
+<body class="hero-gradient">
 
-    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
-                <span class="text-xl font-bold tracking-tight uppercase">BeursAnalyse<span class="text-blue-500">Pro</span></span>
-            </div>
-            <a href="#pricing" class="bg-white text-black px-5 py-2.5 rounded-full text-sm font-bold hover:bg-slate-200 transition">Word Nu Lid</a>
+    <nav class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between border-b border-white/5">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-sm">B</div>
+            <span class="text-xl font-black tracking-tighter uppercase italic">BeursAnalyse<span class="text-blue-500">Pro</span></span>
         </div>
+        <div class="hidden md:flex gap-8 text-sm font-bold text-slate-400 uppercase tracking-widest">
+            <a href="#research" class="hover:text-white transition">Research</a>
+            <a href="#resultaten" class="hover:text-white transition">Resultaten</a>
+            <a href="#reviews" class="hover:text-white transition">Reviews</a>
+        </div>
+        <a href="login.html" class="bg-white text-black px-6 py-2 rounded-full font-black text-xs uppercase tracking-widest hover:bg-blue-500 hover:text-white transition">Leden Login</a>
     </nav>
 
-    <section class="relative pt-20 pb-32 text-center">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="inline-block px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold mb-6 uppercase tracking-widest">
-                Update Jan 2026: Palantir Analyse Live
-            </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
-                Institutionele Research voor de <br>
-                <span class="text-blue-500">Particuliere Belegger</span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-lg text-slate-400 mb-10">
-                Krijg toegang tot onze exclusieve Top 10 aandelen-selectie en diepgaande rapportages.
-            </p>
-            <a href="#pricing" class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition inline-block">
-                Bekijk de Kooplijst
-            </a>
+    <header class="max-w-5xl mx-auto px-6 pt-24 pb-32 text-center">
+        <div class="inline-block px-4 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[10px] font-black uppercase tracking-[0.2em] mb-8">
+            Update: Januari 2026 Research Nu Live
         </div>
-    </section>
-
-    <section class="max-w-5xl mx-auto px-6 -mt-16 relative z-20">
-        <div class="bg-[#161D2F] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
-            <div class="p-6 border-b border-white/5 flex justify-between items-center">
-                <h3 class="font-bold text-sm text-slate-400 uppercase tracking-widest">Live Selectie 2026</h3>
-                <span class="text-xs text-slate-500 italic">Geverifieerde Data</span>
+        <h1 class="text-5xl md:text-8xl font-black mb-8 leading-[0.95] tracking-tighter uppercase">
+            Beleg als een <span class="text-blue-600">Institutionele</span> Professional.
+        </h1>
+        <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
+            Stop met gokken op basis van nieuwsberichten. Krijg toegang tot diepgaande <strong>Aandelen Research</strong>, DCF-waarderingen en concurrentie-analyses die normaal gesproken alleen voor banken beschikbaar zijn.
+        </p>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="checkout.html" class="bg-blue-600 text-white px-10 py-5 rounded-2xl font-black text-lg shadow-2xl shadow-blue-500/20 hover:scale-105 transition uppercase tracking-tighter">Start Direct — €49/mnd</a>
+            <div class="flex items-center justify-center gap-3 px-6 text-slate-500 text-sm font-bold">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span> 1.240+ Actieve Leden
             </div>
-            <table class="w-full text-left">
-                <thead class="bg-black/20 text-xs uppercase text-slate-500">
-                    <tr>
-                        <th class="px-8 py-4 font-bold">Ticker</th>
-                        <th class="px-8 py-4 font-bold">Advies</th>
-                        <th class="px-8 py-4 font-bold text-right">Potentieel</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-white/5">
-                    <tr>
-                        <td class="px-8 py-6 font-bold text-blue-400">PLTR</td>
-                        <td class="px-8 py-6 text-emerald-400 font-bold uppercase text-xs">Strong Buy</td>
-                        <td class="px-8 py-6 text-right text-emerald-400 font-bold">+38.5%</td>
-                    </tr>
-                    <tr class="blur-row">
-                        <td class="px-8 py-6 font-bold">ASML</td>
-                        <td class="px-8 py-6"><span class="bg-slate-700 px-2 py-1 rounded text-[10px]">PREMIUM</span></td>
-                        <td class="px-8 py-6 text-right">+24.0%</td>
-                    </tr>
-                    <tr class="blur-row">
-                        <td class="px-8 py-6 font-bold">NVDA</td>
-                        <td class="px-8 py-6"><span class="bg-slate-700 px-2 py-1 rounded text-[10px]">PREMIUM</span></td>
-                        <td class="px-8 py-6 text-right">+18.2%</td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="p-8 text-center bg-blue-600/5 border-t border-white/5">
-                <p class="text-sm text-slate-400 mb-4 font-medium">Word lid om de volledige lijst te ontgrendelen.</p>
-                <a href="#pricing" class="text-blue-400 font-bold hover:underline">Bekijk abonnementen</a>
+        </div>
+    </header>
+
+    <section id="resultaten" class="max-w-6xl mx-auto px-6 py-20 border-y border-white/5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+            <div class="stat-card p-6">
+                <span class="block text-4xl font-black text-white mb-2">+34.2%</span>
+                <span class="text-xs text-slate-500 uppercase font-black tracking-widest">Top 10 Rendement 2025</span>
+            </div>
+            <div class="stat-card p-6">
+                <span class="block text-4xl font-black text-blue-500 mb-2">9/10</span>
+                <span class="text-xs text-slate-500 uppercase font-black tracking-widest">Outperformers vs S&P 500</span>
+            </div>
+            <div class="stat-card p-6">
+                <span class="block text-4xl font-black text-white mb-2">€2.4B</span>
+                <span class="text-xs text-slate-500 uppercase font-black tracking-widest">Gecombineerde Cap. Onderzoek</span>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-32 max-w-4xl mx-auto px-6 text-center">
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-[#161D2F] border border-white/10 p-10 rounded-3xl text-left">
-                <h3 class="text-xl font-bold mb-2">Maandelijks</h3>
-                <div class="text-4xl font-extrabold mb-8">€49 <span class="text-sm font-normal text-slate-500">/mnd</span></div>
-                <button class="w-full py-4 rounded-xl border border-white/20 font-bold hover:bg-white hover:text-black transition">Start Nu</button>
+    <section id="research" class="max-w-6xl mx-auto px-6 py-32">
+        <div class="grid md:grid-cols-2 gap-20 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter">De "Gouden Standaard" in Research.</h2>
+                <ul class="space-y-6">
+                    <li class="flex gap-4">
+                        <div class="w-6 h-6 bg-blue-600/20 text-blue-500 rounded flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <strong class="block text-white">Diepgaande DCF-Modellen</strong>
+                            <span class="text-slate-500 text-sm">Geen vage koersdoelen, maar wiskundige onderbouwing van de intrinsieke waarde.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-6 h-6 bg-blue-600/20 text-blue-500 rounded flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <strong class="block text-white">Concurrentie-Matrix</strong>
+                            <span class="text-slate-500 text-sm">Wij analyseren de 'Moat' van bedrijven als Palantir, ASML en NVIDIA tegenover hun rivalen.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4">
+                        <div class="w-6 h-6 bg-blue-600/20 text-blue-500 rounded flex items-center justify-center font-bold">✓</div>
+                        <div>
+                            <strong class="block text-white">Wekelijkse Herijking</strong>
+                            <span class="text-slate-500 text-sm">De markt verandert elke dag. Onze koersdoelen en scenario-analyses veranderen mee.</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="bg-blue-600 p-10 rounded-3xl text-left relative overflow-hidden">
-                <div class="absolute top-4 right-4 bg-emerald-400 text-black text-[10px] font-bold px-2 py-1 rounded">BESTE DEAL</div>
-                <h3 class="text-xl font-bold mb-2 text-white">Jaarlijks</h3>
-                <div class="text-4xl font-extrabold mb-8 text-white">€450 <span class="text-sm font-normal text-blue-200">/jr</span></div>
-                <a href="https://buy.stripe.com/8x29AT0ZAfL56nT64z9sk05" class="block w-full py-4 rounded-xl border border-white/20 font-bold hover:bg-white hover:text-black transition text-center no-underline text-white hover:text-black">
-    Start Nu
-</a>
+            <div class="glass p-4 rounded-3xl rotate-2 shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1611974717482-48a7732c253b?q=80&w=800&auto=format&fit=crop" class="rounded-2xl grayscale hover:grayscale-0 transition duration-500" alt="Dashboard Preview">
             </div>
         </div>
     </section>
+
+    <section id="reviews" class="bg-blue-600/5 py-32 border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-black mb-16 text-center uppercase tracking-tighter">Wat onze leden zeggen</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-3xl">
+                    <div class="flex text-blue-500 mb-4 font-bold text-xl">★★★★★</div>
+                    <p class="text-slate-300 italic mb-6 leading-relaxed">
+                        "Eindelijk een platform dat niet over hypes praat, maar over de fundamenten. De analyse over de ASML High-NA uitrol heeft me geholpen om op het juiste moment in te stappen."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full"></div>
+                        <div>
+                            <span class="block text-sm font-bold">Mark de V.</span>
+                            <span class="text-[10px] text-slate-500 uppercase font-black">Particulier Belegger</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl border-blue-500/30">
+                    <div class="flex text-blue-500 mb-4 font-bold text-xl">★★★★★</div>
+                    <p class="text-slate-300 italic mb-6 leading-relaxed">
+                        "De DCF-waarderingen van BeursAnalysePro zijn van een niveau dat je normaal alleen bij Bloomberg-terminals ziet. Het bespaart me uren aan eigen research per week."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full"></div>
+                        <div>
+                            <span class="block text-sm font-bold">Sarah T.</span>
+                            <span class="text-[10px] text-slate-500 uppercase font-black">Financieel Analist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-3xl">
+                    <div class="flex text-blue-500 mb-4 font-bold text-xl">★★★★★</div>
+                    <p class="text-slate-300 italic mb-6 leading-relaxed">
+                        "Ik was sceptisch over de prijs, maar na de eerste Palantir analyse was ik om. De helderheid over hun technologische slotgracht is nergens anders te vinden."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-slate-700 rounded-full"></div>
+                        <div>
+                            <span class="block text-sm font-bold">Jan-Willem K.</span>
+                            <span class="text-[10px] text-slate-500 uppercase font-black">Lid sinds 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="max-w-4xl mx-auto px-6 py-32 text-center">
+        <h2 class="text-4xl font-black mb-8 uppercase tracking-tighter italic">Klaar om serieus te beleggen?</h2>
+        <a href="checkout.html" class="inline-block bg-white text-black px-12 py-6 rounded-2xl font-black text-xl hover:bg-blue-600 hover:text-white transition uppercase tracking-tighter">Krijg Nu Toegang</a>
+        <p class="mt-8 text-slate-600 text-xs uppercase font-bold tracking-[0.2em]">
+            &copy; 2026 BeursAnalysePro Strategy Group | Geen Financieel Advies
+        </p>
+    </footer>
 
 </body>
 </html>
