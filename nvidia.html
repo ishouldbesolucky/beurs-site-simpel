@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier NVIDIA | BeursAnalysePro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; }
+        .content-container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+        .timeline-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 1.5rem; transition: all 0.3s ease; }
+        .timeline-card:hover { border-color: #3B82F6; transform: translateX(10px); }
+    </style>
+</head>
+<body class="py-16">
+
+    <div class="content-container">
+        <a href="dashboard.html" class="text-blue-500 font-black text-[10px] uppercase tracking-widest mb-12 inline-block">← Terug naar Dashboard</a>
+        
+        <header class="mb-16">
+            <h1 class="text-6xl font-black uppercase tracking-tighter italic">NVIDIA <span class="text-blue-500 text-blue-500 text-blue-500">History</span></h1>
+            <p class="text-slate-400 mt-4 uppercase tracking-widest text-xs font-bold">Trackrecord & Analyse Tijdlijn</p>
+        </header>
+
+        <div class="space-y-8 relative border-l-2 border-white/5 pl-8 ml-4">
+            <div class="relative">
+                <div class="absolute -left-[41px] top-0 w-4 h-4 bg-emerald-500 rounded-full border-4 border-[#0B1120]"></div>
+                <a href="nvda-exit-jan-2026.html" class="timeline-card p-8 block group">
+                    <span class="text-emerald-400 font-black text-[10px] uppercase tracking-widest mb-2 block">12 Januari 2026 — Exit</span>
+                    <h3 class="text-2xl font-black uppercase mb-2 group-hover:text-blue-500 transition">Strategische Winstrealisatie (+30,3%)</h3>
+                    <p class="text-slate-400 text-sm italic">Waarom we besloten afscheid te nemen van onze positie op $184,94.</p>
+                </a>
+            </div>
+
+            <div class="relative">
+                <div class="absolute -left-[41px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-[#0B1120]"></div>
+                <a href="nvda-opname-juni-2025.html" class="timeline-card p-8 block group opacity-80">
+                    <span class="text-blue-500 font-black text-[10px] uppercase tracking-widest mb-2 block">4 Juni 2025 — Opname</span>
+                    <h3 class="text-2xl font-black uppercase mb-2 group-hover:text-blue-500 transition">Initiële Koop-Analyse: Blackwell Dominantie</h3>
+                    <p class="text-slate-400 text-sm italic">De fundamentele basis voor onze aankoop op $141,92.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
