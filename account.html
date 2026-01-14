@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Account | BeursAnalysePro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; line-height: 1.7; }
+        .content-container { max-width: 896px; margin: 0 auto; padding: 0 24px; }
+        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 2rem; }
+        .status-badge { background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); color: #10B981; }
+    </style>
+</head>
+<body>
+
+    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="content-container h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a href="dashboard.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white text-sm">B</div>
+                    <span class="text-xl font-bold tracking-tight uppercase italic text-white text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                </a>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="dashboard.html" class="text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-white transition">Dashboard</a>
+                <a href="index.html" class="text-[10px] font-black uppercase tracking-widest text-red-500/80 hover:text-red-400 transition">Uitloggen</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-container py-16">
+        <header class="mb-12">
+            <h1 class="text-4xl font-black uppercase tracking-tighter italic mb-2 text-white text-white">Mijn Account</h1>
+            <p class="text-slate-400 font-medium italic uppercase tracking-widest text-xs">Beheer uw elite lidmaatschap</p>
+        </header>
+
+        <div class="grid grid-cols-1 gap-8">
+            
+            <div class="glass-card p-10">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <h2 class="text-xl font-black uppercase tracking-tight text-white">Lidmaatschap Status</h2>
+                            <span class="status-badge px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest text-emerald-400">Actief</span>
+                        </div>
+                        <p class="text-slate-400 text-sm font-medium italic">U heeft momenteel het <strong class="text-white">Premium Jaarabonnement</strong>.</p>
+                    </div>
+                    <a href="https://billing.stripe.com/p/login/JOUW_STRIPE_PORTAL_LINK" class="bg-white text-black px-8 py-4 rounded-xl font-black text-xs uppercase tracking-widest hover:bg-slate-200 transition">
+                        Beheer via Stripe
+                    </a>
+                </div>
+                <div class="mt-8 pt-8 border-t border-white/5 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-1">Volgende Factuur</span>
+                        <span class="text-sm font-bold text-white">14 Januari 2027</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-1">Bedrag</span>
+                        <span class="text-sm font-bold text-white">€450,00 / jaar</span>
+                    </div>
+                    <div>
+                        <span class="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-1">Betaalmethode</span>
+                        <span class="text-sm font-bold text-white">•••• 4242</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-10">
+                <h2 class="text-xl font-black uppercase tracking-tight mb-8 text-white">Profielgegevens</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-2 ml-1">Naam</label>
+                        <div class="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-sm font-medium text-slate-300">Mark de V.</div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 mb-2 ml-1">E-mailadres</label>
+                        <div class="w-full px-5 py-4 rounded-xl bg-white/5 border border-white/10 text-sm font-medium text-slate-300">mark@voorbeeld.nl</div>
+                    </div>
+                </div>
+                <button class="mt-8 text-blue-500 text-[10px] font-black uppercase tracking-widest hover:text-blue-400 transition italic">Wachtwoord wijzigen →</button>
+            </div>
+
+            <div class="p-10 border border-dashed border-white/10 rounded-3xl text-center">
+                <p class="text-slate-400 text-sm italic mb-4 font-medium">Hulp nodig bij uw account of vragen over de research?</p>
+                <a href="mailto:support@beursanalysepro.nl" class="text-white font-black uppercase tracking-widest text-xs hover:text-blue-500 transition">Contact Support Team</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-12 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-black">
+        &copy; 2026 BeursAnalysePro Strategy Group | Beveiligd Portaal
+    </footer>
+
+</body>
+</html>
