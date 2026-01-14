@@ -13,7 +13,6 @@
         .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
         .dossier-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
         @media (min-width: 768px) { .dossier-grid { grid-template-columns: repeat(3, 1fr); } }
-        th { white-space: nowrap; }
         .ticker-link:hover { text-decoration: underline; color: #60A5FA; }
         .loading-pulse { animation: pulse 2s infinite; color: #475569; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
@@ -25,8 +24,8 @@
         <div class="content-container h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <a href="dashboard.html" class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
-                    <span class="text-xl font-bold tracking-tight uppercase italic text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white text-white">B</div>
+                    <span class="text-xl font-bold tracking-tight uppercase italic text-white text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
                 </a>
             </div>
             <div class="flex items-center gap-6">
@@ -39,15 +38,16 @@
     </nav>
 
     <div class="content-container py-12">
+        
         <header class="mb-12">
-            <h1 class="text-4xl font-black uppercase tracking-tighter italic mb-2">Elite Portaal</h1>
+            <h1 class="text-4xl font-black uppercase tracking-tighter italic mb-2 text-white">Elite Portaal</h1>
             <p id="update-status" class="text-slate-400 font-medium italic uppercase tracking-widest text-xs">Live verbinding via Private API...</p>
         </header>
 
         <section class="mb-20">
             <div class="bg-[#161D2F] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 <div class="p-6 border-b border-white/5 flex justify-between items-center bg-black/10">
-                    <h3 class="font-bold text-sm text-slate-200 uppercase tracking-widest italic">Actieve Kooplijst Selectie</h3>
+                    <h3 class="font-bold text-sm text-slate-200 uppercase tracking-widest italic text-white">Actieve Kooplijst Selectie</h3>
                     <div class="flex items-center gap-2">
                          <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                          <span class="text-[10px] text-slate-400 font-black uppercase tracking-widest">NYSE/NASDAQ Real-time</span>
@@ -55,7 +55,7 @@
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
-                        <thead class="bg-black/20 text-[10px] uppercase text-slate-500 tracking-widest">
+                        <thead class="bg-black/20 text-[10px] uppercase text-slate-500 tracking-widest text-slate-500">
                             <tr>
                                 <th class="px-8 py-5 font-bold">Aandeel</th>
                                 <th class="px-8 py-5 font-bold">Advies</th>
@@ -66,7 +66,7 @@
                                 <th class="px-8 py-5 font-bold text-right">Potentieel</th>
                             </tr>
                         </thead>
-                        <tbody id="live-stock-table" class="divide-y divide-white/5">
+                        <tbody id="live-stock-table" class="divide-y divide-white/5 text-white">
                             <tr data-symbol="PLTR" data-entry="31.20" data-target="57.00" class="hover:bg-white/[0.02] transition">
                                 <td class="px-8 py-6">
                                     <a href="palantir.html" class="ticker-link">
@@ -81,18 +81,18 @@
                                 <td class="px-8 py-6 text-right font-bold text-white">$57.00</td>
                                 <td class="px-8 py-6 text-right text-emerald-400 font-black text-lg live-potential">--%</td>
                             </tr>
-                            <tr data-symbol="ASML" data-entry="690.50" data-target="955.00" class="hover:bg-white/[0.02] transition">
+                            <tr data-symbol="ASML" data-entry="1281.00" data-target="1550.00" class="hover:bg-white/[0.02] transition">
                                 <td class="px-8 py-6">
                                     <a href="asml.html" class="ticker-link">
                                         <span class="block font-black text-blue-400 text-lg leading-none">ASML</span>
                                         <span class="text-[10px] text-slate-500 uppercase font-bold text-white/50">ASML Holding NV</span>
                                     </a>
                                 </td>
-                                <td class="px-8 py-6 text-white font-black uppercase text-xs">Buy</td>
-                                <td class="px-8 py-6 text-right font-medium text-slate-400">$690.50</td>
+                                <td class="px-8 py-6 text-blue-400 font-black uppercase text-xs italic">Koopwaardig</td>
+                                <td class="px-8 py-6 text-right font-medium text-slate-400">$1,281.00</td>
                                 <td class="px-8 py-6 text-right font-bold text-white live-price loading-pulse">...</td>
                                 <td class="px-8 py-6 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded text-sm font-black live-return">--%</span></td>
-                                <td class="px-8 py-6 text-right font-bold text-white">$955.00</td>
+                                <td class="px-8 py-6 text-right font-bold text-white">$1,550.00</td>
                                 <td class="px-8 py-6 text-right text-emerald-400 font-black text-lg live-potential">--%</td>
                             </tr>
                         </tbody>
@@ -112,7 +112,7 @@
                     <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">Palantir Technologies</h3>
                     <p class="text-slate-400 text-sm mb-6 flex-grow italic">Strategische analyse van AIP en defensiecontracten.</p>
                     <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
-                        <span class="text-blue-500 font-bold uppercase tracking-widest">Open Dossier →</span>
+                        <span class="text-blue-500 font-bold uppercase tracking-widest text-blue-500">Open Dossier →</span>
                         <span class="text-slate-600 font-bold">6 min leestijd</span>
                     </div>
                 </a>
@@ -124,7 +124,7 @@
                     <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">ASML Holding</h3>
                     <p class="text-slate-400 text-sm mb-6 flex-grow italic">Impact van High-NA EUV en geopolitieke factoren.</p>
                     <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
-                        <span class="text-blue-500 font-bold uppercase tracking-widest">Open Dossier →</span>
+                        <span class="text-blue-500 font-bold uppercase tracking-widest text-blue-500">Open Dossier →</span>
                         <span class="text-slate-600 font-bold">5 min leestijd</span>
                     </div>
                 </a>
@@ -136,14 +136,14 @@
                     <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">NVIDIA Corporation</h3>
                     <p class="text-slate-400 text-sm mb-6 flex-grow italic">Review van de Blackwell lancering en winststrategie.</p>
                     <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
-                        <span class="text-blue-500 font-bold uppercase tracking-widest">Open Dossier →</span>
-                        <span class="text-slate-600 font-bold">8 min leestijd</span>
+                        <span class="text-blue-500 font-bold uppercase tracking-widest text-blue-500">Open Dossier →</span>
+                        <span class="text-slate-600 font-bold text-slate-600">8 min leestijd</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <section class="mb-20">
+        <section class="mb-20 text-white">
             <h2 class="text-xs font-black uppercase tracking-[0.4em] text-blue-500 mb-8 italic text-center">Gerealiseerde Resultaten (Exits)</h2>
             <div class="bg-[#161D2F]/50 border border-white/5 rounded-2xl overflow-hidden">
                 <table class="w-full text-left">
@@ -156,11 +156,11 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-white/5">
-                        <tr>
+                        <tr class="text-white">
                             <td class="px-8 py-6">
                                 <a href="nvidia.html" class="ticker-link">
                                     <span class="block font-black text-slate-300 text-lg leading-none">NVDA</span>
-                                    <span class="text-[10px] text-slate-500 uppercase font-bold text-white/30">NVIDIA Corporation</span>
+                                    <span class="text-[10px] text-slate-500 uppercase font-bold text-white/30 text-white/30">NVIDIA Corporation</span>
                                 </a>
                             </td>
                             <td class="px-8 py-6 font-medium text-slate-400">12 Okt 2025 | $108.40</td>
@@ -194,14 +194,14 @@
                         const returns = ((current - entry) / entry * 100).toFixed(1);
                         const potential = ((target - current) / current * 100).toFixed(1);
 
-                        row.querySelector('.live-price').innerText = `$${current.toFixed(2)}`;
+                        row.querySelector('.live-price').innerText = `$${current.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
                         row.querySelector('.live-price').classList.remove('loading-pulse');
                         row.querySelector('.live-return').innerText = `${returns > 0 ? '+' : ''}${returns}%`;
                         row.querySelector('.live-potential').innerText = `${potential > 0 ? '+' : ''}${potential}%`;
                         
                         statusEl.innerText = `Update: ${new Date().toLocaleTimeString()} — Live Private Feed Actief`;
                     } else {
-                        statusEl.innerText = "De Amerikaanse beurs is momenteel gesloten.";
+                        statusEl.innerText = "Data verbinding herstelt... (Wacht op NYSE opening)";
                     }
                 } catch (e) {
                     statusEl.innerText = "Data verbinding herstelt...";
