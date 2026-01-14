@@ -13,6 +13,7 @@
         .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
         .dossier-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
         th { white-space: nowrap; }
+        .ticker-link:hover { text-decoration: underline; color: #60A5FA; }
     </style>
 </head>
 <body>
@@ -20,8 +21,10 @@
     <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50">
         <div class="content-container h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
-                <span class="text-xl font-bold tracking-tight uppercase italic">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                <a href="dashboard.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
+                    <span class="text-xl font-bold tracking-tight uppercase italic">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                </a>
             </div>
             <div class="flex items-center gap-6">
                 <span class="hidden md:block text-[10px] font-black uppercase tracking-widest text-emerald-400 italic">Premium Account</span>
@@ -63,8 +66,10 @@
                         <tbody class="divide-y divide-white/5">
                             <tr class="hover:bg-white/[0.02] transition">
                                 <td class="px-8 py-6">
-                                    <span class="block font-black text-blue-400 text-lg leading-none">PLTR</span>
-                                    <span class="text-[10px] text-slate-500 uppercase font-bold">Palantir Technologies</span>
+                                    <a href="palantir.html" class="ticker-link">
+                                        <span class="block font-black text-blue-400 text-lg leading-none">PLTR</span>
+                                        <span class="text-[10px] text-slate-500 uppercase font-bold">Palantir Technologies</span>
+                                    </a>
                                 </td>
                                 <td class="px-8 py-6 text-emerald-400 font-black uppercase text-xs italic">Sterk Koopwaardig</td>
                                 <td class="px-8 py-6 text-right font-medium text-slate-400">$31.20</td>
@@ -74,8 +79,10 @@
                             </tr>
                             <tr class="hover:bg-white/[0.02] transition">
                                 <td class="px-8 py-6">
-                                    <span class="block font-black text-blue-400 text-lg leading-none">ASML</span>
-                                    <span class="text-[10px] text-slate-500 uppercase font-bold">ASML Holding</span>
+                                    <a href="asml.html" class="ticker-link">
+                                        <span class="block font-black text-blue-400 text-lg leading-none">ASML</span>
+                                        <span class="text-[10px] text-slate-500 uppercase font-bold">ASML Holding</span>
+                                    </a>
                                 </td>
                                 <td class="px-8 py-6 text-white font-black uppercase text-xs">Koopwaardig</td>
                                 <td class="px-8 py-6 text-right font-medium text-slate-400">€640.50</td>
@@ -116,6 +123,18 @@
                         <span class="text-slate-600">38 min leestijd</span>
                     </div>
                 </a>
+                <a href="nvidia.html" class="glass-card p-8 flex flex-col group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center font-black text-blue-500">NVDA</div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Dec 2025</span>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">NVIDIA Corporation</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow italic">Review van de Blackwell lancering en winstrealisatie strategie.</p>
+                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
+                        <span class="text-blue-500">Open Dossier →</span>
+                        <span class="text-slate-600">45 min leestijd</span>
+                    </div>
+                </a>
             </div>
         </section>
 
@@ -134,8 +153,10 @@
                     <tbody class="divide-y divide-white/5">
                         <tr>
                             <td class="px-8 py-6">
-                                <span class="block font-black text-slate-300 text-lg leading-none">NVDA</span>
-                                <span class="text-[10px] text-slate-500 uppercase font-bold">NVIDIA Corporation</span>
+                                <a href="nvidia.html" class="ticker-link">
+                                    <span class="block font-black text-slate-300 text-lg leading-none">NVDA</span>
+                                    <span class="text-[10px] text-slate-500 uppercase font-bold">NVIDIA Corporation</span>
+                                </a>
                             </td>
                             <td class="px-8 py-6">
                                 <span class="block text-sm font-bold text-slate-400">12 Okt 2025</span>
