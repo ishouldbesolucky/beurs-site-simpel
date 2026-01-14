@@ -9,8 +9,12 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; line-height: 1.7; }
         .content-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 1.5rem; transition: all 0.3s ease; }
+        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 1.5rem; transition: all 0.3s ease; height: 100%; }
         .glass-card:hover { border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
+        /* Grid hersteld naar naast elkaar */
+        .dossier-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 1.5rem; }
+        @media (min-width: 768px) { .dossier-grid { grid-template-columns: repeat(3, 1fr); } }
+        th { white-space: nowrap; }
         .ticker-link:hover { text-decoration: underline; color: #60A5FA; }
         .loading-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
@@ -23,7 +27,7 @@
             <div class="flex items-center gap-2">
                 <a href="dashboard.html" class="flex items-center gap-2">
                     <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
-                    <span class="text-xl font-bold tracking-tight uppercase italic">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                    <span class="text-xl font-bold tracking-tight uppercase italic text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
                 </a>
             </div>
             <div class="flex items-center gap-6">
@@ -39,7 +43,7 @@
         
         <header class="mb-12">
             <h1 class="text-4xl font-black uppercase tracking-tighter italic mb-2">Elite Portaal</h1>
-            <p id="update-status" class="text-slate-400 font-medium italic uppercase tracking-widest text-xs">Verbinding maken met beursdata...</p>
+            <p id="update-status" class="text-slate-400 font-medium italic uppercase tracking-widest text-xs">Live verbinding met beursdata wordt geactiveerd...</p>
         </header>
 
         <section class="mb-20">
@@ -53,7 +57,7 @@
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
-                        <thead class="bg-black/20 text-[10px] uppercase text-slate-500 tracking-widest">
+                        <thead class="bg-black/20 text-[10px] uppercase text-slate-500 tracking-widest text-slate-500">
                             <tr>
                                 <th class="px-8 py-5 font-bold">Aandeel</th>
                                 <th class="px-8 py-5 font-bold">Advies</th>
@@ -111,7 +115,7 @@
                     <p class="text-slate-400 text-sm mb-6 flex-grow italic">Analyse van de AI-Platform (AIP) hefboomwerking.</p>
                     <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
                         <span class="text-blue-500">Open Dossier →</span>
-                        <span class="text-slate-600">42 min leestijd</span>
+                        <span class="text-slate-600 text-white/40">42 min leestijd</span>
                     </div>
                 </a>
                 <a href="asml.html" class="glass-card p-8 flex flex-col group">
@@ -123,7 +127,19 @@
                     <p class="text-slate-400 text-sm mb-6 flex-grow italic">Impactstudie High-NA EUV en geopolitieke factoren.</p>
                     <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
                         <span class="text-blue-500">Open Dossier →</span>
-                        <span class="text-slate-600">38 min leestijd</span>
+                        <span class="text-slate-600 text-white/40">38 min leestijd</span>
+                    </div>
+                </a>
+                <a href="nvidia.html" class="glass-card p-8 flex flex-col group">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center font-black text-blue-500">NVDA</div>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-500 text-white/50">Dec 2025</span>
+                    </div>
+                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">NVIDIA Corporation</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow italic">Review van de Blackwell lancering en winstrealisatie.</p>
+                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
+                        <span class="text-blue-500">Open Dossier →</span>
+                        <span class="text-slate-600 text-white/40">45 min leestijd</span>
                     </div>
                 </a>
             </div>
@@ -188,7 +204,6 @@
                         const returns = ((current - entry) / entry * 100).toFixed(1);
                         const potential = ((target - current) / current * 100).toFixed(1);
 
-                        // UI Update
                         row.querySelector('.live-price').innerText = `$${current.toFixed(2)}`;
                         row.querySelector('.live-price').classList.remove('loading-pulse');
                         
@@ -198,18 +213,15 @@
                         const potentialEl = row.querySelector('.live-potential');
                         potentialEl.innerText = `${potential > 0 ? '+' : ''}${potential}%`;
                         
-                        statusEl.innerText = `Laatste Update: ${new Date().toLocaleTimeString()} — Live Beursdata Actief`;
+                        statusEl.innerText = `Update: ${new Date().toLocaleTimeString()} — Live Beursdata Actief`;
                     }
                 } catch (e) {
-                    console.error("API Error voor " + symbol);
-                    statusEl.innerText = "Error bij laden live data. Controleer verbinding.";
+                    statusEl.innerText = "Error bij laden live data.";
                 }
             }
         }
-
-        // Initial fetch en interval
         fetchStockData();
-        setInterval(fetchStockData, 60000); // Elke minuut verversen
+        setInterval(fetchStockData, 60000);
     </script>
 
     <footer class="py-16 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-black">
