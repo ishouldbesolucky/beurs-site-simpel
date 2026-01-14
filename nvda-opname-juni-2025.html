@@ -9,104 +9,121 @@
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #0B1120; color: white; line-height: 1.7; }
         .content-container { max-width: 896px; margin: 0 auto; padding: 0 24px; }
+        .glass-card { background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 2rem; }
         .prose h2 { color: #F8FAFC; font-weight: 900; font-size: 2rem; margin-top: 4rem; margin-bottom: 1.5rem; border-left: 6px solid #3B82F6; padding-left: 1.5rem; text-transform: uppercase; letter-spacing: -0.025em; }
         .prose p { margin-bottom: 1.5rem; color: #94A3B8; font-size: 1.125rem; }
         .highlight-box { background: linear-gradient(to right, rgba(59, 130, 246, 0.1), transparent); border-left: 4px solid #3B82F6; padding: 2rem; border-radius: 0 1.5rem 1.5rem 0; margin: 3rem 0; }
-        .archive-header { background: repeating-linear-gradient(45deg, #1e293b, #1e293b 10px, #0f172a 10px, #0f172a 20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .archive-banner { background: repeating-linear-gradient(45deg, #1e293b, #1e293b 10px, #0f172a 10px, #0f172a 20px); border-bottom: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
 <body>
 
-    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50">
+    <nav class="border-b border-white/5 bg-[#0B1120]/80 backdrop-blur-md sticky top-0 z-50 text-white">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 text-white">
                 <a href="dashboard.html" class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
-                    <span class="text-xl font-bold tracking-tight uppercase italic text-white text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold">B</div>
+                    <span class="text-xl font-bold tracking-tight uppercase italic text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
                 </a>
             </div>
-            <a href="nvidia.html" class="text-[10px] font-black uppercase tracking-widest text-blue-500 hover:text-white transition italic text-blue-500">← Terug naar Tijdlijn</a>
+            <a href="nvidia.html" class="text-[10px] font-black uppercase tracking-widest text-blue-500 hover:text-white transition italic">← Terug naar Tijdlijn</a>
         </div>
     </nav>
 
-    <div class="archive-header py-4 text-center">
+    <div class="archive-banner py-4 text-center">
         <span class="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 italic">Gearchiveerd Dossier — Publicatiedatum: 4 Juni 2025</span>
     </div>
 
     <article class="content-container py-16">
         <header class="mb-16">
-            <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-widest mb-8 text-blue-400">
-                Status: Historische Opname
+            <div class="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-black uppercase tracking-widest mb-8">
+                Status: Historische Analyse
             </div>
             <h1 class="text-5xl md:text-7xl font-black mb-8 leading-none tracking-tighter uppercase">
-                NVIDIA: <br><span class="text-blue-500">The AI Supercycle</span>
+                NVIDIA <br><span class="text-blue-500">Corporation</span>
             </h1>
             <div class="flex flex-wrap gap-8 text-sm font-bold uppercase tracking-widest text-slate-400 italic">
                 <span>Opname Koers: $141,92</span>
-                <span class="text-blue-500 text-blue-500">Rating: Strong Buy</span>
+                <span class="text-blue-500">Advies: Strong Buy</span>
             </div>
         </header>
 
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20 text-center">
+            <div class="glass-card p-8">
+                <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-widest">Publicatie</span>
+                <span class="text-white font-bold text-2xl uppercase italic">Juni 2025</span>
+            </div>
+            <div class="glass-card p-8 border-2 border-blue-500/30">
+                <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-widest">Koersdoel (Destijds)</span>
+                <span class="text-blue-400 font-bold text-3xl">$180.00+</span>
+            </div>
+            <div class="glass-card p-8">
+                <span class="block text-slate-500 text-[10px] font-black uppercase mb-2 tracking-widest">Horizon</span>
+                <span class="text-white font-bold text-2xl uppercase italic text-white text-white">12+ Maanden</span>
+            </div>
+        </section>
+
         <div class="prose max-w-none">
             <p class="text-xl text-slate-300 font-medium italic mb-12">
-                "Op 4 juni 2025 bevindt de markt zich in een staat van 'AI-moeheid'. Analisten vrezen voor een afvlakkende vraag naar H100 chips. Wij zien echter een fundamenteel ander scenario: de stilte voor de Blackwell-storm."
+                "Op 4 juni 2025 bevindt de markt zich in een staat van 'AI-moeheid'. Terwijl de consensus vreesde voor een afvlakkende vraag, signaleerden wij een historisch instappunt op $141,92."
             </p>
 
-            <h2>01. De Blackwell Catalyst</h2>
+            <h2>01. Ratio achter de Opname</h2>
             <p>
-                Terwijl de consensus zich focust op de huidige leveringsketen, onderschat de markt de impact van de Blackwell-architectuur (B200). Deze nieuwe generatie biedt niet alleen een 4x hogere rekenkracht voor het trainen van LLM's, maar verlaagt de operationele kosten voor hyperscalers aanzienlijk. Onze analyse wijst op een orderbacklog die tot ver in 2026 reikt.
+                Onze thesis rust op de transitie naar de Blackwell-architectuur. De markt onderschat de operationele efficiëntie die de B200 chips bieden voor grootschalige LLM-training. Met een forward P/E van 34x is de risico-rendementsverhouding op dit niveau uitzonderlijk gunstig voor een bedrijf dat een de-facto monopolie bezit op de brandstof van de moderne economie: rekenkracht.
             </p>
 
             <div class="highlight-box">
-                <h4 class="text-white font-black uppercase text-sm mb-2 tracking-widest">Analisten Outlook (Juni 2025)</h4>
-                <p class="italic text-slate-300 mb-0 font-medium">
-                    "Met een koers van $141,92 wordt NVIDIA verhandeld tegen een forward P/E van 34x. Voor een bedrijf met een monopoliepositie in een exponentieel groeiende markt is dit een historisch koopmoment. Wij verwachten dat de koers de $180 grens zal testen voor het einde van het jaar."
+                <h4 class="text-white font-black uppercase text-sm mb-2 tracking-widest text-white text-white">Analisten Outlook (Juni 2025)</h4>
+                <p class="italic text-slate-300 mb-0 font-medium text-slate-300">
+                    "NVIDIA is niet langer een chipfabrikant; het is de systeem-architect van de wereldwijde AI-infrastructuur. De combinatie van Blackwell-hardware en CUDA-software creëert een 'moat' die voor de komende 24 maanden onneembaar is."
                 </p>
             </div>
 
-            <h2>02. Financiële Kracht & Marges</h2>
+            <h2>02. Technische Analyse & Grafiek</h2>
             <p>
-                De brutomarges van NVIDIA blijven stabiel boven de 75%. Dit is ongekend in de hardware-industrie en wijst op een enorme 'moat'. Software-inkomsten via het CUDA-platform beginnen daarnaast een groter deel van de taart te vormen, wat zorgt voor een meer voorspelbare, terugkerende kasstroom die de markt momenteel nog onderwaardeert.
+                Het aandeel toont een klassieke consolidatie boven de 50-daagse Moving Average. De relatieve sterkte index (RSI) wijst op een gezonde accumulatiefase door institutionele beleggers.
             </p>
 
-            
+            <div class="my-16 glass-card p-6 bg-black/40 border border-white/5">
+                <div class="tradingview-widget-container" style="height: 400px;">
+                    <div id="tradingview_nvda_hist"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                    new TradingView.MediumWidget({
+                      "symbols": [["NVDA", "NASDAQ:NVDA|12M"]],
+                      "chartOnly": false, "width": "100%", "height": 400, "locale": "nl", "colorTheme": "dark", "gridLineColor": "rgba(42, 46, 57, 0.5)", "container_id": "tradingview_nvda_hist"
+                    });
+                    </script>
+                </div>
+            </div>
 
-            <h2>03. Technische Configuratie</h2>
-            <p>
-                Technisch gezien zien we een klassieke 'cup and handle' formatie op de daggrafiek. De koers heeft met succes de steun op de 50-daagse MA getest en het volume loopt op bij elke kleine stijging. Dit wijst op institutionele accumulatie. Onze stop-loss ligt strikt op $128, terwijl de opwaartse weg naar $180 vrij is van significante weerstand.
-            </p>
-
-            <div class="my-16 bg-[#161D2F] border border-white/10 rounded-2xl p-8">
-                <h3 class="text-white font-black uppercase text-xl mb-6 italic">Investment Thesis (4-6-2025)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm">
-                    <div class="space-y-4">
+            <h2>03. Investment Thesis</h2>
+            <div class="my-12 bg-[#161D2F] border border-white/10 rounded-2xl p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-white">
+                    <div class="space-y-4 text-white">
                         <div class="flex items-start gap-3">
                             <span class="w-6 h-6 bg-blue-500/20 rounded flex items-center justify-center text-blue-500 font-bold">1</span>
-                            <p class="text-slate-400"><strong class="text-white">Schaalvoordeel:</strong> Geen enkele concurrent kan op dit moment de productiecapaciteit van de B200 chips evenaren.</p>
+                            <p class="text-slate-400"><strong class="text-white">Dominantie:</strong> Blackwell-chips zijn 4x krachtiger dan de huidige H100 generatie.</p>
                         </div>
                         <div class="flex items-start gap-3">
                             <span class="w-6 h-6 bg-blue-500/20 rounded flex items-center justify-center text-blue-500 font-bold">2</span>
-                            <p class="text-slate-400"><strong class="text-white">Software Lock-in:</strong> CUDA blijft de standaard; overstappen naar AMD of Intel is voor developers te kostbaar.</p>
+                            <p class="text-slate-400"><strong class="text-white">Software:</strong> CUDA lock-in zorgt voor een onbreekbare barrière voor concurrenten als AMD.</p>
                         </div>
                     </div>
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
                             <span class="w-6 h-6 bg-rose-500/20 rounded flex items-center justify-center text-rose-500 font-bold">!</span>
-                            <p class="text-slate-400"><strong class="text-white">Risico:</strong> Mogelijke exportbeperkingen naar China blijven de grootste bedreiging voor de korte termijn.</p>
+                            <p class="text-slate-400"><strong class="text-white">Risico:</strong> Geopolitieke spanningen rondom Taiwan blijven de enige externe bedreiging.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <h2>04. Conclusie</h2>
-            <p>
-                Wij voegen NVIDIA vandaag toe aan de Elite Kooplijst met een initiële allocatie van 10%. Dit is een fundament-positie voor elk modern tech-portfolio. De huidige koers van $141,92 biedt een uitstekende risk/reward verhouding voor de middellange termijn.
-            </p>
         </div>
     </article>
 
-    <footer class="py-16 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-black">
-        &copy; 2026 BeursAnalysePro | De Gouden Standaard in Analyse
+    <footer class="py-16 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-black text-slate-600">
+        &copy; 2026 BeursAnalysePro | Geverifieerde Dossier Historie
     </footer>
 
 </body>
