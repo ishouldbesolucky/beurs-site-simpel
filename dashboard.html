@@ -15,7 +15,7 @@
         @media (min-width: 768px) { .dossier-grid { grid-template-columns: repeat(3, 1fr); } }
         th { white-space: nowrap; }
         .ticker-link:hover { text-decoration: underline; color: #60A5FA; }
-        .loading-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; color: #475569; }
+        .loading-pulse { animation: pulse 2s infinite; color: #475569; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
     </style>
 </head>
@@ -25,8 +25,8 @@
         <div class="content-container h-20 flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <a href="dashboard.html" class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white text-white text-white text-white">B</div>
-                    <span class="text-xl font-bold tracking-tight uppercase italic text-white text-white text-white text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
+                    <div class="w-8 h-8 bg-blue-600 rounded flex items-center justify-center font-bold text-white">B</div>
+                    <span class="text-xl font-bold tracking-tight uppercase italic text-white">BeursAnalyse<span class="text-blue-500">Pro</span></span>
                 </a>
             </div>
             <div class="flex items-center gap-6">
@@ -39,24 +39,23 @@
     </nav>
 
     <div class="content-container py-12">
-        
         <header class="mb-12">
-            <h1 class="text-4xl font-black uppercase tracking-tighter italic mb-2 text-white text-white text-white text-white">Elite Portaal</h1>
-            <p id="update-status" class="text-slate-400 font-medium italic uppercase tracking-widest text-xs text-slate-400 text-slate-400 text-slate-400 text-slate-400">Live verbinding maken via private API...</p>
+            <h1 class="text-4xl font-black uppercase tracking-tighter italic mb-2">Elite Portaal</h1>
+            <p id="update-status" class="text-slate-400 font-medium italic uppercase tracking-widest text-xs">Live verbinding via Private API...</p>
         </header>
 
-        <section class="mb-20 text-white text-white text-white text-white">
+        <section class="mb-20">
             <div class="bg-[#161D2F] border border-white/10 rounded-2xl shadow-2xl overflow-hidden">
                 <div class="p-6 border-b border-white/5 flex justify-between items-center bg-black/10">
-                    <h3 class="font-bold text-sm text-slate-200 uppercase tracking-widest italic text-white text-white text-white text-white">Actieve Kooplijst Selectie</h3>
+                    <h3 class="font-bold text-sm text-slate-200 uppercase tracking-widest italic">Actieve Kooplijst Selectie</h3>
                     <div class="flex items-center gap-2">
                          <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
-                         <span class="text-[10px] text-slate-400 font-black uppercase tracking-widest text-slate-400 text-slate-400 text-slate-400 text-slate-400">Real-time NYSE/NASDAQ Feed</span>
+                         <span class="text-[10px] text-slate-400 font-black uppercase tracking-widest">NYSE/NASDAQ Real-time</span>
                     </div>
                 </div>
-                <div class="overflow-x-auto text-white">
+                <div class="overflow-x-auto">
                     <table class="w-full text-left">
-                        <thead class="bg-black/20 text-[10px] uppercase text-slate-500 tracking-widest text-slate-500 text-slate-500 text-slate-500 text-slate-500">
+                        <thead class="bg-black/20 text-[10px] uppercase text-slate-500 tracking-widest">
                             <tr>
                                 <th class="px-8 py-5 font-bold">Aandeel</th>
                                 <th class="px-8 py-5 font-bold">Advies</th>
@@ -71,30 +70,30 @@
                             <tr data-symbol="PLTR" data-entry="31.20" data-target="57.00" class="hover:bg-white/[0.02] transition">
                                 <td class="px-8 py-6">
                                     <a href="palantir.html" class="ticker-link">
-                                        <span class="block font-black text-blue-400 text-lg leading-none text-blue-400 text-blue-400 text-blue-400 text-blue-400">PLTR</span>
-                                        <span class="text-[10px] text-slate-500 uppercase font-bold text-white/50 text-white/50 text-white/50 text-white/50">Palantir Technologies</span>
+                                        <span class="block font-black text-blue-400 text-lg leading-none">PLTR</span>
+                                        <span class="text-[10px] text-slate-500 uppercase font-bold text-white/50">Palantir Technologies</span>
                                     </a>
                                 </td>
-                                <td class="px-8 py-6 text-emerald-400 font-black uppercase text-xs italic text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400">Strong Buy</td>
-                                <td class="px-8 py-6 text-right font-medium text-slate-400 text-slate-400 text-slate-400 text-slate-400">$31.20</td>
-                                <td class="px-8 py-6 text-right font-bold text-white live-price loading-pulse text-white text-white text-white text-white">...</td>
-                                <td class="px-8 py-6 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded text-sm font-black live-return text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400">--%</span></td>
-                                <td class="px-8 py-6 text-right font-bold text-white text-white text-white text-white">$57.00</td>
-                                <td class="px-8 py-6 text-right text-emerald-400 font-black text-lg live-potential text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400">--%</td>
+                                <td class="px-8 py-6 text-emerald-400 font-black uppercase text-xs italic">Strong Buy</td>
+                                <td class="px-8 py-6 text-right font-medium text-slate-400">$31.20</td>
+                                <td class="px-8 py-6 text-right font-bold text-white live-price loading-pulse">...</td>
+                                <td class="px-8 py-6 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded text-sm font-black live-return">--%</span></td>
+                                <td class="px-8 py-6 text-right font-bold text-white">$57.00</td>
+                                <td class="px-8 py-6 text-right text-emerald-400 font-black text-lg live-potential">--%</td>
                             </tr>
-                            <tr data-symbol="ASML" data-entry="690.50" data-target="955.00" class="hover:bg-white/[0.02] transition text-white">
+                            <tr data-symbol="ASML" data-entry="690.50" data-target="955.00" class="hover:bg-white/[0.02] transition">
                                 <td class="px-8 py-6">
                                     <a href="asml.html" class="ticker-link">
-                                        <span class="block font-black text-blue-400 text-lg leading-none text-blue-400 text-blue-400 text-blue-400 text-blue-400 text-blue-400">ASML</span>
-                                        <span class="text-[10px] text-slate-500 uppercase font-bold text-white/50 text-white/50 text-white/50 text-white/50">ASML Holding NV</span>
+                                        <span class="block font-black text-blue-400 text-lg leading-none">ASML</span>
+                                        <span class="text-[10px] text-slate-500 uppercase font-bold text-white/50">ASML Holding NV</span>
                                     </a>
                                 </td>
-                                <td class="px-8 py-6 text-white font-black uppercase text-xs text-white text-white text-white text-white">Buy</td>
-                                <td class="px-8 py-6 text-right font-medium text-slate-400 text-slate-400 text-slate-400 text-slate-400 text-slate-400">$690.50</td>
-                                <td class="px-8 py-6 text-right font-bold text-white live-price loading-pulse text-white text-white text-white text-white">...</td>
-                                <td class="px-8 py-6 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded text-sm font-black live-return text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400">--%</span></td>
-                                <td class="px-8 py-6 text-right font-bold text-white text-white text-white text-white text-white">$955.00</td>
-                                <td class="px-8 py-6 text-right text-emerald-400 font-black text-lg live-potential text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400 text-emerald-400">--%</td>
+                                <td class="px-8 py-6 text-white font-black uppercase text-xs">Buy</td>
+                                <td class="px-8 py-6 text-right font-medium text-slate-400">$690.50</td>
+                                <td class="px-8 py-6 text-right font-bold text-white live-price loading-pulse">...</td>
+                                <td class="px-8 py-6 text-right"><span class="bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded text-sm font-black live-return">--%</span></td>
+                                <td class="px-8 py-6 text-right font-bold text-white">$955.00</td>
+                                <td class="px-8 py-6 text-right text-emerald-400 font-black text-lg live-potential">--%</td>
                             </tr>
                         </tbody>
                     </table>
@@ -102,53 +101,53 @@
             </div>
         </section>
 
-        <section class="mb-20 text-white text-white text-white text-white">
-            <h2 class="text-xs font-black uppercase tracking-[0.4em] text-blue-500 mb-8 italic text-blue-500 text-blue-500 text-blue-500 text-blue-500">Research Dossiers</h2>
+        <section class="mb-20">
+            <h2 class="text-xs font-black uppercase tracking-[0.4em] text-blue-500 mb-8 italic">Research Dossiers</h2>
             <div class="dossier-grid">
-                <a href="palantir.html" class="glass-card p-8 flex flex-col group text-white text-white text-white text-white">
-                    <div class="flex justify-between items-start mb-6 text-white text-white text-white text-white">
+                <a href="palantir.html" class="glass-card p-8 flex flex-col group">
+                    <div class="flex justify-between items-start mb-6">
                         <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center font-black text-blue-500">PLTR</div>
                         <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Jan 2026</span>
                     </div>
-                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition text-white text-white text-white text-white">Palantir Technologies</h3>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow italic text-slate-400 text-slate-400 text-slate-400 text-slate-400">Analyse van de AI-Platform (AIP) hefboomwerking.</p>
-                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-white text-white text-white text-white">
-                        <span class="text-blue-500">Open Dossier →</span>
-                        <span class="text-slate-600 text-white/40">42 min leestijd</span>
+                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">Palantir Technologies</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow italic">Strategische analyse van AIP en defensiecontracten.</p>
+                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
+                        <span class="text-blue-500 font-bold uppercase tracking-widest">Open Dossier →</span>
+                        <span class="text-slate-600 font-bold">6 min leestijd</span>
                     </div>
                 </a>
-                <a href="asml.html" class="glass-card p-8 flex flex-col group text-white text-white text-white text-white">
-                    <div class="flex justify-between items-start mb-6 text-white text-white text-white text-white">
+                <a href="asml.html" class="glass-card p-8 flex flex-col group">
+                    <div class="flex justify-between items-start mb-6">
                         <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center font-black text-blue-500">ASML</div>
                         <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Jan 2026</span>
                     </div>
-                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition text-white text-white text-white text-white">ASML Holding</h3>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow italic text-slate-400 text-slate-400 text-slate-400 text-slate-400">Impactstudie High-NA EUV en geopolitieke factoren.</p>
-                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-white text-white text-white text-white">
-                        <span class="text-blue-500">Open Dossier →</span>
-                        <span class="text-slate-600 text-white/40">38 min leestijd</span>
+                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">ASML Holding</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow italic">Impact van High-NA EUV en geopolitieke factoren.</p>
+                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
+                        <span class="text-blue-500 font-bold uppercase tracking-widest">Open Dossier →</span>
+                        <span class="text-slate-600 font-bold">5 min leestijd</span>
                     </div>
                 </a>
-                <a href="nvidia.html" class="glass-card p-8 flex flex-col group text-white text-white text-white text-white">
-                    <div class="flex justify-between items-start mb-6 text-white text-white text-white text-white">
+                <a href="nvidia.html" class="glass-card p-8 flex flex-col group">
+                    <div class="flex justify-between items-start mb-6">
                         <div class="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center font-black text-blue-500">NVDA</div>
-                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-500 text-white/50">Dec 2025</span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Dec 2025</span>
                     </div>
-                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition text-white text-white text-white text-white">NVIDIA Corporation</h3>
-                    <p class="text-slate-400 text-sm mb-6 flex-grow italic text-slate-400 text-slate-400 text-slate-400 text-slate-400">Review van de Blackwell lancering en winstrealisatie.</p>
-                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest text-white text-white text-white text-white">
-                        <span class="text-blue-500 text-blue-500 text-blue-500 text-blue-500">Open Dossier →</span>
-                        <span class="text-slate-600 text-white/40">45 min leestijd</span>
+                    <h3 class="text-xl font-black uppercase tracking-tight mb-2 group-hover:text-blue-500 transition">NVIDIA Corporation</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow italic">Review van de Blackwell lancering en winststrategie.</p>
+                    <div class="pt-6 border-t border-white/5 flex justify-between items-center text-[10px] font-black uppercase tracking-widest">
+                        <span class="text-blue-500 font-bold uppercase tracking-widest">Open Dossier →</span>
+                        <span class="text-slate-600 font-bold">8 min leestijd</span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <section class="mb-20 text-white text-white text-white text-white text-white">
-            <h2 class="text-xs font-black uppercase tracking-[0.4em] text-blue-500 mb-8 italic text-center text-blue-500 text-blue-500 text-blue-500 text-blue-500 text-blue-500">Gerealiseerde Resultaten (Exits)</h2>
-            <div class="bg-[#161D2F]/50 border border-white/5 rounded-2xl overflow-hidden text-white text-white text-white text-white">
+        <section class="mb-20">
+            <h2 class="text-xs font-black uppercase tracking-[0.4em] text-blue-500 mb-8 italic text-center">Gerealiseerde Resultaten (Exits)</h2>
+            <div class="bg-[#161D2F]/50 border border-white/5 rounded-2xl overflow-hidden">
                 <table class="w-full text-left">
-                    <thead class="bg-black/20 text-[10px] uppercase text-slate-600 tracking-widest text-slate-600 text-slate-600 text-slate-600 text-slate-600">
+                    <thead class="bg-black/20 text-[10px] uppercase text-slate-600 tracking-widest">
                         <tr>
                             <th class="px-8 py-5 font-bold">Naam</th>
                             <th class="px-8 py-5 font-bold">Opname (Datum/Prijs)</th>
@@ -156,25 +155,17 @@
                             <th class="px-8 py-5 font-bold text-right">Rendement</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-white/5 text-white">
-                        <tr class="text-white">
-                            <td class="px-8 py-6 text-white">
-                                <a href="nvidia.html" class="ticker-link text-white">
+                    <tbody class="divide-y divide-white/5">
+                        <tr>
+                            <td class="px-8 py-6">
+                                <a href="nvidia.html" class="ticker-link">
                                     <span class="block font-black text-slate-300 text-lg leading-none">NVDA</span>
-                                    <span class="text-[10px] text-slate-500 uppercase font-bold text-white/30 text-white/30 text-white/30 text-white/30">NVIDIA Corporation</span>
+                                    <span class="text-[10px] text-slate-500 uppercase font-bold text-white/30">NVIDIA Corporation</span>
                                 </a>
                             </td>
-                            <td class="px-8 py-6 text-white">
-                                <span class="block text-sm font-bold text-slate-400">12 Okt 2025</span>
-                                <span class="text-xs text-slate-500">$108.40</span>
-                            </td>
-                            <td class="px-8 py-6 text-white text-white">
-                                <span class="block text-sm font-bold text-white">14 Jan 2026</span>
-                                <span class="text-xs text-slate-500">$128.10</span>
-                            </td>
-                            <td class="px-8 py-6 text-right text-white">
-                                <span class="text-emerald-400 font-black text-xl italic">+18.2%</span>
-                            </td>
+                            <td class="px-8 py-6 font-medium text-slate-400">12 Okt 2025 | $108.40</td>
+                            <td class="px-8 py-6 font-bold text-white">14 Jan 2026 | $128.10</td>
+                            <td class="px-8 py-6 text-right font-black text-emerald-400 text-xl italic">+18.2%</td>
                         </tr>
                     </tbody>
                 </table>
@@ -205,28 +196,24 @@
 
                         row.querySelector('.live-price').innerText = `$${current.toFixed(2)}`;
                         row.querySelector('.live-price').classList.remove('loading-pulse');
-                        
-                        const returnEl = row.querySelector('.live-return');
-                        returnEl.innerText = `${returns > 0 ? '+' : ''}${returns}%`;
-                        
-                        const potentialEl = row.querySelector('.live-potential');
-                        potentialEl.innerText = `${potential > 0 ? '+' : ''}${potential}%`;
+                        row.querySelector('.live-return').innerText = `${returns > 0 ? '+' : ''}${returns}%`;
+                        row.querySelector('.live-potential').innerText = `${potential > 0 ? '+' : ''}${potential}%`;
                         
                         statusEl.innerText = `Update: ${new Date().toLocaleTimeString()} — Live Private Feed Actief`;
+                    } else {
+                        statusEl.innerText = "De Amerikaanse beurs is momenteel gesloten.";
                     }
                 } catch (e) {
-                    statusEl.innerText = "Data verbinding herstelt... (Wacht op NYSE opening)";
+                    statusEl.innerText = "Data verbinding herstelt...";
                 }
             }
         }
-
         fetchStockData();
         setInterval(fetchStockData, 120000);
     </script>
 
-    <footer class="py-16 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-black text-slate-600">
-        &copy; 2026 BeursAnalysePro Strategy Group | Geautoriseerde Toegang
+    <footer class="py-16 border-t border-white/5 text-center text-slate-600 text-[10px] uppercase tracking-widest font-black">
+        &copy; 2026 BeursAnalysePro Strategy Group
     </footer>
-
 </body>
 </html>
